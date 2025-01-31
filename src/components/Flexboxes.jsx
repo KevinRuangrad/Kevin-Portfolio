@@ -27,10 +27,10 @@ export const Flexboxes = () => {
         className="px-[48px] py-[40px]"
       >
         <img
-          src="src/assets/2470.jpg"
-          alt="avatar"
-          className="mb-4 size-24 rounded-full"
-        />
+  src="/2470.jpg" // Update the path to reference the public folder
+  alt="avatar"
+  className="mb-4 size-24 rounded-full"
+/>
         <h2 className="text-white text-[64px] font-medium items-start tracking-tighter leading-[72px]">
           kevin ruangrad is a frontend developer
         </h2>
