@@ -5,8 +5,7 @@ import {
   faBriefcase,
   faGlobe,
   faLink,
-  faShare,
-
+  faInfo,
 } from "@fortawesome/free-solid-svg-icons";
 import InfinteScroll from "./InfinteScroll.jsx";
 
@@ -96,7 +95,7 @@ export const Flexboxes = () => {
   width="col-span-1"
   className="flex text-center justify-center"
 >
-  <a href="https://www.instagram.com/kevinruangrad_/" target="_blank" rel="noopener noreferrer" className="button-link">
+  <a href="https://github.com/KevinRuangrad" target="_blank" rel="noopener noreferrer" className="button-link">
     <motion.button
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
@@ -105,7 +104,7 @@ export const Flexboxes = () => {
       className="text-white text-[20px] font-medium tracking-tighter"
       style={{ height: '100%', width: '100%' }} /* Ensure the button takes the full height and width of the a tag */
     >
-      Instagram
+      Placeholder
     </motion.button>
   </a>
 </Block>
@@ -123,18 +122,10 @@ export const Flexboxes = () => {
       className="text-white text-[20px] font-medium tracking-tighter"
       style={{ height: '100%', width: '100%' }} /* Ensure the button takes the full height and width of the a tag */
     >
-      Facebook
+      Donwload CV
     </motion.button>
   </a>
 </Block>
-
-      <Block height="h-full" width="col-span-4" className="px-[48px] py-[40px]">
-        <InfinteScroll>
-          <div style={{ width: "100%" }}>
-            {/* Your content here */}
-          </div>
-        </InfinteScroll>
-      </Block>
       <Block
         height="h-full"
         width="col-span-1"
@@ -164,6 +155,13 @@ export const Flexboxes = () => {
           passion for clean, efficient code.
         </h2>
       </Block>
+      <Block height="h-full" width="col-span-4" className="px-[48px] py-[40px]">
+        <InfinteScroll>
+          <div style={{ width: "100%" }}>
+            {/* Your content here */}
+          </div>
+        </InfinteScroll>
+      </Block>
       <Block
         id="work"
         height="h-[740]"
@@ -186,8 +184,8 @@ export const Flexboxes = () => {
             whileTap={{ scale: 0.90 }}
           >
             <FontAwesomeIcon
-              className="text-white text-4xl bg-[#ff5e1a] rounded-full p-4 hover:bg-[#131315] hover:text-white transition duration-200"
-              icon={faShare}
+              className="text-white text-4xl bg-[#ff5e1a] rounded-full p-4 w-10 hover:bg-[#131315] hover:text-white transition duration-200"
+              icon={faInfo}
             />
           </motion.button>
         </div>

@@ -7,10 +7,10 @@ const Header = () => {
       <nav>
         <ul className="flex space-x-10">
           <li>
-            <Link to="#work">work.</Link>
+            <Link to="#work">projects.</Link>
           </li>
           <li>
-            <Link to="#spotify">contact.</Link>
+            <Link to="#spotify">work./education.</Link>
           </li>
         </ul>
       </nav>
