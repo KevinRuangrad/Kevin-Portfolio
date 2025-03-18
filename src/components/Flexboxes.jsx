@@ -8,7 +8,6 @@ import {
   faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import InfinteScroll from "./InfinteScroll.jsx";
-import SplitText from "./SplitText.jsx";
 
 export const Flexboxes = () => {
   const handleAnimationComplete = () => {
@@ -25,27 +24,15 @@ export const Flexboxes = () => {
       }}
       className="mx-2 m-6 grid grid-cols-4 gap-4 justify-end w-full"
     >
-      <Block
-        height="h-full"
-        width="col-span-2"
-        className="px-[48px] py-[40px]"
-      >
+      <Block height="h-full" width="col-span-2" className="px-[48px] py-[40px]">
         <img
           src="/2470.jpg" // Update the path to reference the public folder
           alt="avatar"
           className="mb-4 size-24 rounded-full"
         />
-        <SplitText
-          text="kevin ruangrad is a frontend developer"
-          className="text-white text-[62px] font-medium items-start tracking-tighter leading-[72px]"
-          delay={150}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+        <h1 className="text-white text-[62px] font-medium items-start tracking-tighter leading-[72px]">
+          kevin ruangrad is a frontend developer
+        </h1>
         <h2 className="text-[#8a8a93] text-[64px] font-medium items-start tracking-tighter leading-[72px]">
           currently studying in Grit Academy
         </h2>
@@ -171,11 +158,7 @@ export const Flexboxes = () => {
           </motion.button>
         </a>
       </Block>
-      <Block
-        height="h-full"
-        width="col-span-1"
-        className="px-[48px] py-[40px]"
-      >
+      <Block height="h-full" width="col-span-1" className="px-[48px] py-[40px]">
         <FontAwesomeIcon
           className="text-white text-8xl text-left"
           icon={faGlobe}
@@ -189,8 +172,7 @@ export const Flexboxes = () => {
       </Block>
       <Block height="h-full" width="col-span-3" className="px-[48px] py-[40px]">
         <h2 className="text-white text-[50px] font-medium items-start tracking-tighter leading-[60px]">
-          As a{" "}
-          <span className="text-[#ff5e1a]">frontend developer</span>, I
+          As a <span className="text-[#ff5e1a]">frontend developer</span>, I
           specialize in building seamless, user-friendly interfaces for digital
           products.
         </h2>
@@ -202,9 +184,7 @@ export const Flexboxes = () => {
       </Block>
       <Block height="h-full" width="col-span-4" className="px-[48px] py-[40px]">
         <InfinteScroll>
-          <div style={{ width: "100%" }}>
-            {/* Your content here */}
-          </div>
+          <div style={{ width: "100%" }}>{/* Your content here */}</div>
         </InfinteScroll>
       </Block>
       <Block
@@ -225,8 +205,8 @@ export const Flexboxes = () => {
           </div>
           <motion.button
             className="button"
-            whileHover={{ scale: 1.10 }}
-            whileTap={{ scale: 0.90 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             <FontAwesomeIcon
               className="text-white text-4xl bg-[#ff5e1a] rounded-full p-4 w-10 hover:bg-[#131315] hover:text-white transition duration-200"
@@ -234,8 +214,7 @@ export const Flexboxes = () => {
             />
           </motion.button>
         </div>
-        <div className="flex flex-wrap shadow-inner bg-[#131315]">
-        </div>
+        <div className="flex flex-wrap shadow-inner bg-[#131315]"></div>
       </Block>
     </motion.div>
   );
