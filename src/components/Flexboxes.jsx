@@ -1,15 +1,20 @@
 import PropTypes from "prop-types";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBriefcase,
   faGlobe,
-  faLink,
   faInfo,
+  faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import InfinteScroll from "./InfinteScroll.jsx";
+import SplitText from "./SplitText.jsx";
 
 export const Flexboxes = () => {
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
+  };
+
   return (
     <motion.div
       id="home"
@@ -26,13 +31,21 @@ export const Flexboxes = () => {
         className="px-[48px] py-[40px]"
       >
         <img
-  src="/2470.jpg" // Update the path to reference the public folder
-  alt="avatar"
-  className="mb-4 size-24 rounded-full"
-/>
-        <h2 className="text-white text-[64px] font-medium items-start tracking-tighter leading-[72px]">
-          kevin ruangrad is a frontend developer
-        </h2>
+          src="/2470.jpg" // Update the path to reference the public folder
+          alt="avatar"
+          className="mb-4 size-24 rounded-full"
+        />
+        <SplitText
+          text="kevin ruangrad is a frontend developer"
+          className="text-white text-[62px] font-medium items-start tracking-tighter leading-[72px]"
+          delay={150}
+          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+          easing="easeOutCubic"
+          threshold={0.2}
+          rootMargin="-50px"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
         <h2 className="text-[#8a8a93] text-[64px] font-medium items-start tracking-tighter leading-[72px]">
           currently studying in Grit Academy
         </h2>
@@ -55,77 +68,109 @@ export const Flexboxes = () => {
         </motion.button>
       </Block>
       <Block
-  height="h-14"
-  width="col-span-1"
-  className="flex text-center justify-center"
->
-  <a href="https://www.linkedin.com/in/kevin-ruangrad-0696232b2/" target="_blank" rel="noopener noreferrer" className="button-link">
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      whileDrag={{ scale: 0.9, rotate: 10 }}
-      drag
-      className="text-white text-[20px] font-medium tracking-tighter"
-      style={{ height: '100%', width: '100%' }} /* Ensure the button takes the full height and width of the a tag */
-    >
-      Linkedin
-    </motion.button>
-  </a>
-</Block>
-<Block
-  height="h-14"
-  width="col-span-1"
-  className="flex text-center justify-center"
->
-  <a href="https://github.com/KevinRuangrad" target="_blank" rel="noopener noreferrer" className="button-link">
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      whileDrag={{ scale: 0.9, rotate: 10 }}
-      drag
-      className="text-white text-[20px] font-medium tracking-tighter"
-      style={{ height: '100%', width: '100%' }} /* Ensure the button takes the full height and width of the a tag */
-    >
-      Github
-    </motion.button>
-  </a>
-</Block>
-<Block
-  height="h-14"
-  width="col-span-1"
-  className="flex text-center justify-center"
->
-  <a href="https://github.com/KevinRuangrad" target="_blank" rel="noopener noreferrer" className="button-link">
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      whileDrag={{ scale: 0.9, rotate: 10 }}
-      drag
-      className="text-white text-[20px] font-medium tracking-tighter"
-      style={{ height: '100%', width: '100%' }} /* Ensure the button takes the full height and width of the a tag */
-    >
-      Placeholder
-    </motion.button>
-  </a>
-</Block>
-<Block
-  height="h-14"
-  width="col-span-1"
-  className="flex text-center justify-center"
->
-  <a href="https://www.facebook.com/kruangrad/?locale=sv_SE" target="_blank" rel="noopener noreferrer" className="button-link">
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      whileDrag={{ scale: 0.9, rotate: 10 }}
-      drag
-      className="text-white text-[20px] font-medium tracking-tighter"
-      style={{ height: '100%', width: '100%' }} /* Ensure the button takes the full height and width of the a tag */
-    >
-      Donwload CV
-    </motion.button>
-  </a>
-</Block>
+        height="h-14"
+        width="col-span-1"
+        className="flex text-center justify-center"
+      >
+        <a
+          href="https://www.linkedin.com/in/kevin-ruangrad-0696232b2/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-link"
+        >
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            whileDrag={{ scale: 0.9, rotate: 10 }}
+            drag
+            className="text-white text-[20px] font-medium tracking-tighter"
+            style={{
+              height: "100%",
+              width: "100%",
+            }} /* Ensure the button takes the full height and width of the a tag */
+          >
+            Linkedin
+          </motion.button>
+        </a>
+      </Block>
+      <Block
+        height="h-14"
+        width="col-span-1"
+        className="flex text-center justify-center"
+      >
+        <a
+          href="https://github.com/KevinRuangrad"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-link"
+        >
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            whileDrag={{ scale: 0.9, rotate: 10 }}
+            drag
+            className="text-white text-[20px] font-medium tracking-tighter"
+            style={{
+              height: "100%",
+              width: "100%",
+            }} /* Ensure the button takes the full height and width of the a tag */
+          >
+            Github
+          </motion.button>
+        </a>
+      </Block>
+      <Block
+        height="h-14"
+        width="col-span-1"
+        className="flex text-center justify-center"
+      >
+        <a
+          href="https://github.com/KevinRuangrad"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-link"
+        >
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            whileDrag={{ scale: 0.9, rotate: 10 }}
+            drag
+            className="text-white text-[20px] font-medium tracking-tighter"
+            style={{
+              height: "100%",
+              width: "100%",
+            }} /* Ensure the button takes the full height and width of the a tag */
+          >
+            Placeholder
+          </motion.button>
+        </a>
+      </Block>
+      <Block
+        height="h-14"
+        width="col-span-1"
+        className="flex text-center justify-center"
+      >
+        <a
+          href="https://www.facebook.com/kruangrad/?locale=sv_SE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="button-link"
+        >
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            whileDrag={{ scale: 0.9, rotate: 10 }}
+            drag
+            className="text-white text-[20px] font-medium tracking-tighter"
+            style={{
+              height: "100%",
+              width: "100%",
+            }} /* Ensure the button takes the full height and width of the a tag */
+          >
+            Download CV
+          </motion.button>
+        </a>
+      </Block>
       <Block
         height="h-full"
         width="col-span-1"
