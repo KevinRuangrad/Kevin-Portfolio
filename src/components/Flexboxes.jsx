@@ -96,24 +96,6 @@ export const Flexboxes = () => {
   width="col-span-1"
   className="flex text-center justify-center"
 >
-  <a href="https://www.instagram.com/kevinruangrad_/" target="_blank" rel="noopener noreferrer" className="button-link">
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      whileDrag={{ scale: 0.9, rotate: 10 }}
-      drag
-      className="text-white text-[20px] font-medium tracking-tighter"
-      style={{ height: '100%', width: '100%' }} /* Ensure the button takes the full height and width of the a tag */
-    >
-      Instagram
-    </motion.button>
-  </a>
-</Block>
-<Block
-  height="h-14"
-  width="col-span-1"
-  className="flex text-center justify-center"
->
   <a href="https://www.facebook.com/kruangrad/?locale=sv_SE" target="_blank" rel="noopener noreferrer" className="button-link">
     <motion.button
       whileHover={{ scale: 1.1 }}
