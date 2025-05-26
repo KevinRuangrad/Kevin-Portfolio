@@ -2,12 +2,17 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBriefcase,
-  faGlobe,
-  faInfo,
-  faLink,
+    faBriefcase,
+    faGlobe,
+    faInfo,
+    faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import InfinteScroll from "./InfinteScroll.jsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export const Flexboxes = () => {
   return (
@@ -230,39 +235,39 @@ export const Flexboxes = () => {
 };
 
 const Block = ({ id, height, width, className, children }) => {
-  return (
-    <motion.div
-      id={id}
-      variants={{
-        initial: {
-          scale: 0.5,
-          y: 50,
-          opacity: 0,
-        },
-        animate: {
-          scale: 1,
-          y: 0,
-          opacity: 1,
-        },
-      }}
-      transition={{
-        type: "spring",
-        mass: 3,
-        stiffness: 400,
-        damping: 50,
-        duration: 0.5,
-      }}
-      className={`${height} ${width} ${className} rounded-3xl bg-[#131315]`}
-    >
-      {children}
-    </motion.div>
-  );
+    return (
+        <motion.div
+            id={id}
+            variants={{
+                initial: {
+                    scale: 0.5,
+                    y: 50,
+                    opacity: 0,
+                },
+                animate: {
+                    scale: 1,
+                    y: 0,
+                    opacity: 1,
+                },
+            }}
+            transition={{
+                type: "spring",
+                mass: 3,
+                stiffness: 400,
+                damping: 50,
+                duration: 0.5,
+            }}
+            className={`${height} ${width} ${className} rounded-3xl bg-[#131315]`}
+        >
+            {children}
+        </motion.div>
+    );
 };
 
 Block.propTypes = {
-  id: PropTypes.string,
-  height: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  children: PropTypes.node,
+    id: PropTypes.string,
+    height: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    children: PropTypes.node,
 };

@@ -1,46 +1,46 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Inter Display, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter Display, sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: black;
-  z-index: -1;
-  position: relative;
+    background-color: black;
+    z-index: -1;
+    position: relative;
 }
 
 .body-container {
-  height: 100vh;
-  width: 100%;
-  max-width: 1240px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+    height: 100vh;
+    width: 100%;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
 .card-container {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding-top: 20px;
-  margin-bottom: -120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: -120px;
 }
 
 .button-link {
-  display: block; /* Make the a tag a block-level element */
-  text-decoration: none; /* Remove underline */
-  padding: 0; /* Remove any padding */
-  margin: 0; /* Remove any margin */
-  height: 100%; /* Ensure it takes the full height */
-  width: 100%; /* Ensure it takes the full width */
+    display: block; /* Make the a tag a block-level element */
+    text-decoration: none; /* Remove underline */
+    padding: 0; /* Remove any padding */
+    margin: 0; /* Remove any margin */
+    height: 100%; /* Ensure it takes the full height */
+    width: 100%; /* Ensure it takes the full width */
 }
 /* .noise {
   position: fixed;
@@ -53,3 +53,27 @@ body {
   background-size: cover;
   opacity: 0.7;
 } */
+
+/* Change arrow color */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ff5e1a; /* Your accent color */
+}
+
+/* Change pagination bullet color */
+.swiper-pagination-bullet {
+    background: #8a8a93;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background: #ff5e1a;
+}
+
+/* Make Swiper arrows thicker */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 3rem; /* Makes the arrow bigger */
+    font-weight: bold; /* Makes the arrow thicker */
+    /* You can also use filter for more boldness: */
+    /* filter: drop-shadow(0 0 2px #ff5e1a); */
+}
