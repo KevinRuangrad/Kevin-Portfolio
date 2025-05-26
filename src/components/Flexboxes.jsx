@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBriefcase,
   faGlobe,
+  faInfo,
   faLink,
-  faShare,
-
 } from "@fortawesome/free-solid-svg-icons";
 import InfinteScroll from "./InfinteScroll.jsx";
 
@@ -21,19 +20,15 @@ export const Flexboxes = () => {
       }}
       className="mx-2 m-6 grid grid-cols-4 gap-4 justify-end w-full"
     >
-      <Block
-        height="h-full"
-        width="col-span-2"
-        className="px-[48px] py-[40px]"
-      >
+      <Block height="h-full" width="col-span-2" className="px-[48px] py-[40px]">
         <img
-  src="/2470.jpg" // Update the path to reference the public folder
-  alt="avatar"
-  className="mb-4 size-24 rounded-full"
-/>
-        <h2 className="text-white text-[64px] font-medium items-start tracking-tighter leading-[72px]">
+          src="/2470.jpg" // Update the path to reference the public folder
+          alt="avatar"
+          className="mb-4 size-24 rounded-full"
+        />
+        <h1 className="text-white text-[62px] font-medium items-start tracking-tighter leading-[72px]">
           kevin ruangrad is a frontend developer
-        </h2>
+        </h1>
         <h2 className="text-[#8a8a93] text-[64px] font-medium items-start tracking-tighter leading-[72px]">
           currently studying in Grit Academy
         </h2>
@@ -135,8 +130,7 @@ export const Flexboxes = () => {
       </Block>
       <Block height="h-full" width="col-span-3" className="px-[48px] py-[40px]">
         <h2 className="text-white text-[50px] font-medium items-start tracking-tighter leading-[60px]">
-          As a{" "}
-          <span className="text-[#ff5e1a]">frontend developer</span>, I
+          As a <span className="text-[#ff5e1a]">frontend developer</span>, I
           specialize in building seamless, user-friendly interfaces for digital
           products.
         </h2>
@@ -145,6 +139,11 @@ export const Flexboxes = () => {
           clear communication, a deep understanding of the audience, and a
           passion for clean, efficient code.
         </h2>
+      </Block>
+      <Block height="h-full" width="col-span-4" className="px-[48px] py-[40px]">
+        <InfinteScroll>
+          <div style={{ width: "100%" }}>{/* Your content here */}</div>
+        </InfinteScroll>
       </Block>
       <Block
         id="work"
@@ -164,16 +163,66 @@ export const Flexboxes = () => {
           </div>
           <motion.button
             className="button"
-            whileHover={{ scale: 1.10 }}
-            whileTap={{ scale: 0.90 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             <FontAwesomeIcon
-              className="text-white text-4xl bg-[#ff5e1a] rounded-full p-4 hover:bg-[#131315] hover:text-white transition duration-200"
-              icon={faShare}
+              className="text-white text-4xl bg-[#ff5e1a] rounded-full p-4 w-10 hover:bg-[#131315] hover:text-white transition duration-200"
+              icon={faInfo}
             />
           </motion.button>
         </div>
         <div className="flex flex-wrap shadow-inner bg-[#131315]">
+          <div className="carousel w-full">
+            <div id="slide1" className="carousel-item relative w-full">
+              <img
+                src="/src/assets/ScrumBoard.png"
+                alt="Scrumboard"
+                className="w-full"
+              />
+              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide4" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide2" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
+            </div>
+            <div id="slide2" className="carousel-item relative w-full">
+              <img src="src/assets/Vintage.png" alt="Burger" className="w-full" />
+              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide1" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide3" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
+            </div>
+            <div id="slide3" className="carousel-item relative w-full">
+              <img src="" alt="Burger" className="w-full" />
+              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide2" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide4" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
+            </div>
+            <div id="slide4" className="carousel-item relative w-full">
+              <img src="" alt="Burger" className="w-full" />
+              <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                <a href="#slide3" className="btn btn-circle">
+                  ❮
+                </a>
+                <a href="#slide1" className="btn btn-circle">
+                  ❯
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </Block>
     </motion.div>
