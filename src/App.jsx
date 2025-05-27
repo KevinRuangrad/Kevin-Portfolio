@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import { Flexboxes } from "./components/Flexboxes.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -46,7 +47,10 @@ function App() {
             <div className="noise"></div>
             <HashRouter>
                 <Header />
-                <Flexboxes />
+                <Routes>
+                    <Route path="/" element={<Flexboxes />} />
+                    {/* Add more routes here as needed */}
+                </Routes>
                 <AnimatePresence>
                     {isVisible && (
                         <motion.button

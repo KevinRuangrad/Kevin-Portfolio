@@ -151,9 +151,10 @@ export const Flexboxes = () => {
                 className="flex text-center justify-center"
             >
                 <a
-                    href="/Kevin_Ruangrad_CV.docx.pdf" // Place this file in your public folder
+                    href="/Kevin_Ruangrad_CV.docx.pdf"
                     download
                     className="button-link"
+                    rel="noopener noreferrer"
                 >
                     <motion.button
                         whileHover={{ scale: 1.1 }}
