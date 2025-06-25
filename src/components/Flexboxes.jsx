@@ -36,7 +36,7 @@ export const Flexboxes = () => {
                     className="mb-4 size-24 rounded-full"
                 />
                 <h1 className="text-white text-[62px] font-medium items-start tracking-tighter leading-[72px]">
-                    kevin ruangrad is a frontend developer
+                    Kevin Ruangrad is a Frontend Developer
                 </h1>
                 <h2 className="text-[#8a8a93] text-[64px] font-medium items-start tracking-tighter leading-[72px]">
                     currently studying in Grit Academy
@@ -52,18 +52,18 @@ export const Flexboxes = () => {
                     icon={faLink}
                 />
                 <h2 className="text-white text-[64px] font-medium items-start tracking-tighter leading-[72px] text-center m-8">
-                    have a project in mind?
+                    Have a project in mind?
                 </h2>
                 <a
-                    href="mailto:kevin.ruangrad@gritacademy.se"
+                    href="mailto:kevin.ruangrad@outlook.com"
                     className="button-link"
                 >
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-[#ff5e1a] cursor-pointer text-white rounded-full px-[32px] py-[24px] min-h-24 w-auto font-medium text-3xl self-end"
+                        className="bg-[#ff5e1a] cursor-pointer text-white rounded-full px-[32px] py-[24px] min-h-24 w-auto font-medium text-3xl self-center ml-8"
                     >
-                        kevin.ruangrad@gritacademy.se
+                        kevin.ruangrad@outlook.com
                     </motion.button>
                 </a>
             </Block>
@@ -194,7 +194,7 @@ export const Flexboxes = () => {
             >
                 <h2 className="text-white text-[50px] font-medium items-start tracking-tighter leading-[60px]">
                     As a{" "}
-                    <span className="text-[#ff5e1a]">frontend developer</span>,
+                    <span className="text-[#ff5e1a]">Frontend Developer</span>,
                     I specialize in building seamless, user-friendly interfaces
                     for digital products.
                 </h2>
@@ -228,7 +228,7 @@ export const Flexboxes = () => {
                             icon={faBriefcase}
                         />
                         <h2 className="text-white text-[40px] font-medium tracking-tighter ml-4">
-                            projects
+                            Projects
                         </h2>
                     </div>
                     <motion.button
