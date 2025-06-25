@@ -255,28 +255,28 @@ export const Flexboxes = () => {
                     >
                         <SwiperSlide>
                             <img
-                                src="/src/assets/ScrumBoard.png"
+                                src="/assets/ScrumBoard.png"
                                 alt="Scrumboard"
                                 className="w-full max-h-[500px] object-cover"
                             />
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src="/src/assets/Vintage.png"
+                                src="/assets/Vintage.png"
                                 alt="Vintage"
                                 className="w-full max-h-[500px] object-cover"
                             />
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src="/src/assets/Dude.png"
+                                src="/assets/Dude.png"
                                 alt="Project 3"
                                 className="w-full max-h-[500px] object-cover"
                             />
                         </SwiperSlide>
                         <SwiperSlide>
                             <img
-                                src="/src/assets/Lejon.jpg"
+                                src="/assets/Lejon.jpg"
                                 alt="Project 4"
                                 className="w-full max-h-[500px] object-cover"
                             />
