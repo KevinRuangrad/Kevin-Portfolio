@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import daisyui from "daisyui/package.json" assert { type: "json" };
+import daisyui from "daisyui/package.json" with { type: "json" };
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],

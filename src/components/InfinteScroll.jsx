@@ -75,6 +75,8 @@ const icons = [
     </li>,
 ];
 
+import PropTypes from "prop-types";
+
 function StyleSheet({ scrollWidth }) {
     return (
         <style>
@@ -117,6 +119,10 @@ function StyleSheet({ scrollWidth }) {
         </style>
     );
 }
+
+StyleSheet.propTypes = {
+    scrollWidth: PropTypes.number.isRequired,
+};
 
 function InfiniteScroll() {
     const listRef = useRef(null);
