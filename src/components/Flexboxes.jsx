@@ -308,16 +308,6 @@ export const Flexboxes = () => {
                             Projects
                         </h2>
                     </div>
-                    <motion.button
-                        className="button"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                    >
-                        <FontAwesomeIcon
-                            className="text-white text-4xl bg-[#ff5e1a] rounded-full p-4 w-10 hover:bg-[#131315] hover:text-white transition duration-200"
-                            icon={faInfo}
-                        />
-                    </motion.button>
                 </div>
                 <div className="flex flex-wrap shadow-inner bg-[#131315]">
                     <Swiper
