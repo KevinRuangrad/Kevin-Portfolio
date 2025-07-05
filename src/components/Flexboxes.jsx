@@ -13,8 +13,79 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useState } from "react";
+
+const ProjectModal = ({ open, onClose, project }) => {
+    if (!open || !project) return null;
+    return (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+            <div className="bg-[#1a1a1a] rounded-xl p-8 max-w-lg w-full relative">
+                <button
+                    onClick={onClose}
+                    className="absolute top-2 right-2 text-white text-2xl"
+                >
+                    &times;
+                </button>
+                <img
+                    src={project.img}
+                    alt={project.alt}
+                    className="w-full max-h-64 object-cover rounded-lg mb-4"
+                />
+                <h3 className="text-white text-2xl font-bold mb-2">
+                    {project.title}
+                </h3>
+                <p className="text-[#b0b0b0] text-lg">{project.description}</p>
+            </div>
+        </div>
+    );
+};
+
+ProjectModal.propTypes = {
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+    project: PropTypes.shape({
+        img: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+    }),
+};
 
 export const Flexboxes = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    const projects = [
+        {
+            img: "/assets/ScrumBoard.png",
+            alt: "Scrumboard",
+            title: "Scrumboard",
+            description:
+                "A digital scrumboard for agile project management, featuring drag-and-drop tasks and real-time updates.",
+        },
+        {
+            img: "/assets/Vintage.png",
+            alt: "Vintage",
+            title: "Vintage",
+            description:
+                "A retro-themed e-commerce site for vintage products, with a focus on unique UI and smooth shopping experience.",
+        },
+        {
+            img: "/assets/Dude.png",
+            alt: "Project 3",
+            title: "Dude",
+            description:
+                "A social platform for connecting like-minded individuals, built with React and Firebase.",
+        },
+        {
+            img: "/assets/Lejon.jpg",
+            alt: "Project 4",
+            title: "Lejon",
+            description:
+                "A wildlife photography portfolio showcasing high-resolution images and stories behind each shot.",
+        },
+    ];
+
     return (
         <motion.div
             id="home"
@@ -253,35 +324,25 @@ export const Flexboxes = () => {
                         slidesPerView={1}
                         className="w-full rounded-xl"
                     >
-                        <SwiperSlide>
-                            <img
-                                src="/assets/ScrumBoard.png"
-                                alt="Scrumboard"
-                                className="w-full max-h-[500px] object-cover"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img
-                                src="/assets/Vintage.png"
-                                alt="Vintage"
-                                className="w-full max-h-[500px] object-cover"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img
-                                src="/assets/Dude.png"
-                                alt="Project 3"
-                                className="w-full max-h-[500px] object-cover"
-                            />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img
-                                src="/assets/Lejon.jpg"
-                                alt="Project 4"
-                                className="w-full max-h-[500px] object-cover"
-                            />
-                        </SwiperSlide>
+                        {projects.map((project, idx) => (
+                            <SwiperSlide key={idx}>
+                                <img
+                                    src={project.img}
+                                    alt={project.alt}
+                                    className="w-full max-h-[500px] object-cover cursor-pointer"
+                                    onClick={() => {
+                                        setSelectedProject(project);
+                                        setModalOpen(true);
+                                    }}
+                                />
+                            </SwiperSlide>
+                        ))}
                     </Swiper>
+                    <ProjectModal
+                        open={modalOpen}
+                        onClose={() => setModalOpen(false)}
+                        project={selectedProject}
+                    />
                 </div>
             </Block>
         </motion.div>
