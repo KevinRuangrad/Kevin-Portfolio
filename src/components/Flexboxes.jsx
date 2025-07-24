@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faBriefcase,
     faGlobe,
-    faInfo,
     faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import InfinteScroll from "./InfinteScroll.jsx";
@@ -66,18 +65,45 @@ export const Flexboxes = () => {
             img: "/assets/ScrumBoard.png",
             alt: "Scrumboard",
             title: "Scrumboard",
-            description:
-                "A digital scrumboard for agile project management, featuring drag-and-drop tasks and real-time updates.",
+            description: (
+                <>
+                    A digital scrumboard for agile project management, featuring
+                    drag-and-drop tasks and real-time updates.
+                    <br />
+                    <a
+                        href="https://github.com/KevinRuangrad/FE24-JS2-slutprojekt-front-kevin-ruangrad"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#ff5e1a] underline mt-2"
+                    >
+                        View on GitHub
+                    </a>
+                </>
+            ),
         },
         {
-            img: "/assets/Vintage.png",
-            alt: "Vintage",
-            title: "Vintage",
-            description:
-                "A retro-themed e-commerce site for vintage products, with a focus on unique UI and smooth shopping experience.",
+            img: "/assets/TMDB.png",
+            alt: "TMDB",
+            title: "TMDB",
+            description: (
+                <>
+                    A movie database web app inspired by IMDb, built using The
+                    Movie Database (TMDB) API. Browse, search, and discover
+                    movies with detailed information and images.
+                    <br />
+                    <a
+                        href="https://github.com/KevinRuangrad/fe24-js1-slutprojekt-kevin-ruangrad"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#ff5e1a] underline mt-2"
+                    >
+                        View on GitHub
+                    </a>
+                </>
+            ),
         },
         {
-            img: "/assets/Dude.png",
+            img: "/assets/",
             alt: "Project 3",
             title: "Dude",
             description:
