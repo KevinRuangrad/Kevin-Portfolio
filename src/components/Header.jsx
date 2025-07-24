@@ -10,7 +10,13 @@ const Header = () => {
                         <Link to="#work">Projects.</Link>
                     </li>
                     <li>
-                        <Link to="#spotify">Work./Education.</Link>
+                        <a
+                            href="/Kevin_Ruangrad_CV_frontend.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Work./Education.
+                        </a>
                     </li>
                 </ul>
             </nav>

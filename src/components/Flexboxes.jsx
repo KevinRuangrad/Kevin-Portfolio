@@ -103,18 +103,49 @@ export const Flexboxes = () => {
             ),
         },
         {
-            img: "/assets/",
-            alt: "Project 3",
-            title: "Dude",
-            description:
-                "A social platform for connecting like-minded individuals, built with React and Firebase.",
+            img: "/assets/TRAINING.png",
+            alt: "TRAINING",
+            title: "TRAINING DIARY",
+            description: (
+                <>
+                    A full stack training diary app where you can add, update,
+                    and track your workouts. Built with a custom SQL database,
+                    JavaScript, and both frontend and backend code.
+                    <br />
+                    <a
+                        href="https://github.com/KevinRuangrad/fe24-js1-slutprojekt-kevin-ruangrad"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#ff5e1a] underline mt-2"
+                    >
+                        View on GitHub
+                    </a>
+                </>
+            ),
         },
         {
-            img: "/assets/Lejon.jpg",
-            alt: "Project 4",
-            title: "Lejon",
-            description:
-                "A wildlife photography portfolio showcasing high-resolution images and stories behind each shot.",
+            img: "/assets/MESSAGEBOARD.png",
+            alt: "Messageboard",
+            title: "MESSAGEBOARD",
+            description: (
+                <>
+                    GritSquare is a web application that allows users to post,
+                    view, and manage messages in a dynamic and interactive
+                    interface. It features dark mode, message sorting, search
+                    functionality, and fun animations. This was a group project
+                    where I acted as group leader and directed the final
+                    versions commits.
+                    <br />
+                    <a
+                        href="https://github.com/KevinRuangrad/fe24-versionshantering-gritsquare-grupp1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#ff5e1a] underline mt-2"
+                    >
+                        View on GitHub
+                    </a>
+                </>
+            ),
         },
     ];
 
@@ -228,7 +259,7 @@ export const Flexboxes = () => {
                 className="flex text-center justify-center"
             >
                 <a
-                    href="https://github.com/KevinRuangrad"
+                    href="https://www.facebook.com/kruangrad/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button-link"
@@ -244,7 +275,7 @@ export const Flexboxes = () => {
                             width: "100%",
                         }} /* Ensure the button takes the full height and width of the a tag */
                     >
-                        Placeholder
+                        Facebook
                     </motion.button>
                 </a>
             </Block>
