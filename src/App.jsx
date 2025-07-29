@@ -20,7 +20,7 @@ function App() {
     const [isVisible, setIsVisible] = useState(false);
 
     const scrollToTop = () => {
-        globalThis.scrollTo({ top: 0, behavior: "smooth" });
+        lenis.scrollTo(0, { immediate: false });
     };
 
     const toggleVisibility = () => {
