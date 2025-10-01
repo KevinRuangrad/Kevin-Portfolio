@@ -213,11 +213,10 @@ export const Flexboxes = () => {
                     className="button-link"
                 >
                     <motion.button
-                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         whileDrag={{ scale: 0.9, rotate: 10 }}
                         drag
-                        className="text-white text-[20px] font-medium tracking-tighter"
+                        className="text-white text-[20px] font-medium tracking-tighter hover:text-[#ff5e1a] transition-colors duration-200 cursor-pointer"
                         style={{
                             height: "100%",
                             width: "100%",
@@ -239,11 +238,10 @@ export const Flexboxes = () => {
                     className="button-link"
                 >
                     <motion.button
-                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         whileDrag={{ scale: 0.9, rotate: 10 }}
                         drag
-                        className="text-white text-[20px] font-medium tracking-tighter"
+                        className="text-white text-[20px] font-medium tracking-tighter hover:text-[#ff5e1a] transition-colors duration-200 cursor-pointer"
                         style={{
                             height: "100%",
                             width: "100%",
@@ -265,11 +263,10 @@ export const Flexboxes = () => {
                     className="button-link"
                 >
                     <motion.button
-                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         whileDrag={{ scale: 0.9, rotate: 10 }}
                         drag
-                        className="text-white text-[20px] font-medium tracking-tighter"
+                        className="text-white text-[20px] font-medium tracking-tighter hover:text-[#ff5e1a] transition-colors duration-200 cursor-pointer"
                         style={{
                             height: "100%",
                             width: "100%",
@@ -291,11 +288,10 @@ export const Flexboxes = () => {
                     rel="noopener noreferrer"
                 >
                     <motion.button
-                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                         whileDrag={{ scale: 0.9, rotate: 10 }}
                         drag
-                        className="text-white text-[20px] font-medium tracking-tighter"
+                        className="text-white text-[20px] font-medium tracking-tighter hover:text-[#ff5e1a] transition-colors duration-200 cursor-pointer"
                         style={{
                             height: "100%",
                             width: "100%",
@@ -403,39 +399,39 @@ export const Flexboxes = () => {
 };
 
 const Block = ({ id, height, width, className, children }) => {
-  return (
-    <motion.div
-      id={id}
-      variants={{
-        initial: {
-          scale: 0.5,
-          y: 50,
-          opacity: 0,
-        },
-        animate: {
-          scale: 1,
-          y: 0,
-          opacity: 1,
-        },
-      }}
-      transition={{
-        type: "spring",
-        mass: 3,
-        stiffness: 400,
-        damping: 50,
-        duration: 0.5,
-      }}
-      className={`${height} ${width} ${className} rounded-3xl bg-[#131315]`}
-    >
-      {children}
-    </motion.div>
-  );
+    return (
+        <motion.div
+            id={id}
+            variants={{
+                initial: {
+                    scale: 0.5,
+                    y: 50,
+                    opacity: 0,
+                },
+                animate: {
+                    scale: 1,
+                    y: 0,
+                    opacity: 1,
+                },
+            }}
+            transition={{
+                type: "spring",
+                mass: 3,
+                stiffness: 400,
+                damping: 50,
+                duration: 0.5,
+            }}
+            className={`${height} ${width} ${className} rounded-3xl bg-[#131315]`}
+        >
+            {children}
+        </motion.div>
+    );
 };
 
 Block.propTypes = {
-  id: PropTypes.string,
-  height: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  children: PropTypes.node,
+    id: PropTypes.string,
+    height: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    children: PropTypes.node,
 };
