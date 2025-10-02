@@ -26,12 +26,12 @@ const AboutModal = ({ open, onClose }) => {
                             stiffness: 300,
                             damping: 30,
                         }}
-                        className="bg-[#1a1a1a] rounded-xl p-8 max-w-2xl w-full mx-4 relative max-h-[80vh] overflow-y-auto"
+                        className="bg-[var(--bg-surface)] rounded-xl p-8 max-w-2xl w-full mx-4 relative max-h-[80vh] overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <button
                             onClick={onClose}
-                            className="absolute top-4 right-4 text-white text-3xl hover:text-[#ff5e1a] transition-colors duration-200"
+                            className="absolute top-4 right-4 text-[var(--text-primary)] text-3xl hover:text-[var(--accent-color)] transition-colors duration-200"
                         >
                             &times;
                         </button>
@@ -58,7 +58,7 @@ const AboutModal = ({ open, onClose }) => {
                                             delay: 0.5,
                                             duration: 0.5,
                                         }}
-                                        className="text-white text-3xl font-bold mb-2"
+                                        className="text-[var(--text-primary)] text-3xl font-bold mb-2"
                                     >
                                         About Me
                                     </motion.h2>
@@ -69,7 +69,7 @@ const AboutModal = ({ open, onClose }) => {
                                             delay: 0.6,
                                             duration: 0.5,
                                         }}
-                                        className="text-[#ff5e1a] text-xl font-semibold"
+                                        className="text-[var(--accent-color)] text-xl font-semibold"
                                     >
                                         Kevin Ruangrad - Frontend Developer
                                     </motion.h3>
@@ -83,7 +83,7 @@ const AboutModal = ({ open, onClose }) => {
                                 className="space-y-4"
                             >
                                 <div>
-                                    <h4 className="text-white text-lg font-semibold mb-2">
+                                    <h4 className="text-[var(--text-primary)] text-lg font-semibold mb-2">
                                         My Journey
                                     </h4>
                                     <p className="text-[#b0b0b0] text-base leading-relaxed">
@@ -104,7 +104,7 @@ const AboutModal = ({ open, onClose }) => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.8, duration: 0.5 }}
                                 >
-                                    <h4 className="text-white text-lg font-semibold mb-2">
+                                    <h4 className="text-[var(--text-primary)] text-lg font-semibold mb-2">
                                         What I Do
                                     </h4>
                                     <p className="text-[#b0b0b0] text-base leading-relaxed">
@@ -125,7 +125,7 @@ const AboutModal = ({ open, onClose }) => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.9, duration: 0.5 }}
                                 >
-                                    <h4 className="text-white text-lg font-semibold mb-2">
+                                    <h4 className="text-[var(--text-primary)] text-lg font-semibold mb-2">
                                         Beyond Code
                                     </h4>
                                     <p className="text-[#b0b0b0] text-base leading-relaxed">
@@ -148,7 +148,7 @@ const AboutModal = ({ open, onClose }) => {
                                     transition={{ delay: 1.0, duration: 0.5 }}
                                     className="flex flex-wrap gap-3 mt-6"
                                 >
-                                    <h4 className="text-white text-lg font-semibold mb-2 w-full">
+                                    <h4 className="text-[var(--text-primary)] text-lg font-semibold mb-2 w-full">
                                         Skills & Technologies
                                     </h4>
                                     {[
@@ -170,7 +170,7 @@ const AboutModal = ({ open, onClose }) => {
                                                 delay: 1.1 + index * 0.1,
                                                 duration: 0.3,
                                             }}
-                                            className="bg-[#ff5e1a] text-white px-3 py-1 rounded-full text-sm font-medium"
+                                            className="bg-[var(--accent-color)] text-white px-3 py-1 rounded-full text-sm font-medium"
                                         >
                                             {skill}
                                         </motion.span>

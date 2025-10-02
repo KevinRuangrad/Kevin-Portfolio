@@ -5,14 +5,34 @@
     font-family: Inter Display, sans-serif;
 }
 
+/* CSS Custom Properties for theming */
+:root {
+    /* Default to dark theme */
+    --bg-primary: #000000;
+    --bg-surface: #131315;
+    --text-primary: #ffffff;
+    --accent-color: #ff5e1a;
+    --accent-hover: #e04e14;
+}
+
+:root.light {
+    --bg-primary: #ffffff;
+    --bg-surface: #f8f9fa;
+    --text-primary: #1a1a1a;
+    --accent-color: #32cd32;
+    --accent-hover: #28a428;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: black;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     z-index: -1;
     position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .body-container {
@@ -57,7 +77,7 @@ body {
 /* Change arrow color */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #ff5e1a; /* Your accent color */
+    color: var(--accent-color); /* Use CSS custom property */
 }
 
 /* Change pagination bullet color */
@@ -66,7 +86,7 @@ body {
     opacity: 1;
 }
 .swiper-pagination-bullet-active {
-    background: #ff5e1a;
+    background: var(--accent-color);
 }
 
 /* Make Swiper arrows thicker */

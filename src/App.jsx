@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { HashRouter } from "react-router-dom";
 import Lenis from "lenis";
 import "./styles/style.css";
+import ThemeProvider from "./contexts/ThemeContext.jsx";
 
 const lenis = new Lenis({
     autoRaf: true,
@@ -39,30 +40,32 @@ function App() {
     });
 
     return (
-        <div className="body-container relative">
-            <div className="noise"></div>
-            <HashRouter>
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Flexboxes />} />
-                    {/* Add more routes here as needed */}
-                </Routes>
-                <AnimatePresence>
-                    {isVisible && (
-                        <motion.button
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 50 }}
-                            transition={{ duration: 0.1 }}
-                            className="fixed bottom-4 right-8 bg-[#ff5e1a] text-white rounded-full p-4 shadow-lg hover:bg-[#e04e14] transition duration-100"
-                            onClick={scrollToTop}
-                        >
-                            <FontAwesomeIcon icon={faAngleUp} />
-                        </motion.button>
-                    )}
-                </AnimatePresence>
-            </HashRouter>
-        </div>
+        <ThemeProvider>
+            <div className="body-container relative">
+                <div className="noise"></div>
+                <HashRouter>
+                    <Header />
+                    <Routes>
+                        <Route path="/" element={<Flexboxes />} />
+                        {/* Add more routes here as needed */}
+                    </Routes>
+                    <AnimatePresence>
+                        {isVisible && (
+                            <motion.button
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 50 }}
+                                transition={{ duration: 0.1 }}
+                                className="fixed bottom-4 right-8 bg-[var(--accent-color)] text-white rounded-full p-4 shadow-lg hover:bg-[var(--accent-hover)] transition duration-100"
+                                onClick={scrollToTop}
+                            >
+                                <FontAwesomeIcon icon={faAngleUp} />
+                            </motion.button>
+                        )}
+                    </AnimatePresence>
+                </HashRouter>
+            </div>
+        </ThemeProvider>
     );
 }
 
