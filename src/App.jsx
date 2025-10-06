@@ -13,6 +13,10 @@ import ThemeProvider from "./contexts/ThemeContext.jsx";
 
 const lenis = new Lenis({
     autoRaf: true,
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    smoothTouch: false,
 });
 
 lenis.on("scroll", () => {});
@@ -33,11 +37,19 @@ function App() {
     };
 
     useEffect(() => {
-        globalThis.addEventListener("scroll", toggleVisibility);
-        return () => {
-            globalThis.removeEventListener("scroll", toggleVisibility);
+        const handleScroll = () => {
+            toggleVisibility();
         };
-    });
+
+        // Add both window and Lenis scroll listeners for redundancy
+        globalThis.addEventListener("scroll", handleScroll);
+        lenis.on("scroll", handleScroll);
+
+        return () => {
+            globalThis.removeEventListener("scroll", handleScroll);
+            lenis.off("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <ThemeProvider>

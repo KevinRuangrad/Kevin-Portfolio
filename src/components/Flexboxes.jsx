@@ -157,7 +157,7 @@ export const Flexboxes = () => {
             transition={{
                 staggerChildren: 0.04,
             }}
-            className="mx-2 m-6 grid grid-cols-4 gap-4 justify-end w-full"
+            className="mx-2 m-6 grid grid-cols-4 gap-4 justify-end w-full min-h-screen"
         >
             <Block
                 height="h-full"
@@ -337,9 +337,9 @@ export const Flexboxes = () => {
                 </h2>
             </Block>
             <Block
-                height="h-full"
+                height="h-[200px]"
                 width="col-span-4"
-                className="px-[48px] py-[40px]"
+                className="px-[48px] py-[40px] overflow-hidden"
             >
                 <InfinteScroll>
                     <div style={{ width: "100%" }}>
